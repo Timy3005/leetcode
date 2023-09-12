@@ -27,10 +27,12 @@ int removeDuplicates(int *nums, int numsSize) {
     }
   }
 
-  for (int i = numsSize - 1; i >= numsSize - k; i--)
+  while (i < numsSize)
   {
     nums[i] = 0;
+    i++;
   }
+
   return k;
 }
 
