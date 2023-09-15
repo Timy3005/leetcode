@@ -17,7 +17,7 @@ int removeDuplicates(int *nums, int numsSize) {
   }
 
   int i, j = 0;
-  while (j < COUNT_SIZE) {
+  while (j < COUNT_SIZE && i < numsSize) { // nums[k >= numsSize] are being accessed...
     if (count[j] == 0) {
       j++;
     } else {
@@ -33,7 +33,7 @@ int removeDuplicates(int *nums, int numsSize) {
     i++;
   }
 
-  return k;
+  return numsSize - k;
 }
 
 void print_array(int *array, int size)
